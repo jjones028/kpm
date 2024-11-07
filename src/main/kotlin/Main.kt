@@ -45,7 +45,6 @@ fun main(args: Array<String>) {
             return true
         }
     }
-    // Set up the compiler
     val arguments = K2JVMCompilerArguments().apply {
         moduleName = "test"
         destination = ".kpm/build/test.jar"
