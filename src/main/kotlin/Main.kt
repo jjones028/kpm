@@ -17,14 +17,11 @@ import java.net.http.HttpResponse
 import java.util.zip.ZipFile
 import kotlin.io.path.Path
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main(args: Array<String>) {
     val argParser = ArgParser("kpm")
     val name by argParser.option(ArgType.String, description = "Your name", shortName = "n").default("Jeremy")
     argParser.parse(args)
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
+
     println("Hello, $name!")
     val compiler = K2JVMCompiler()
     val collector = object: MessageCollector {

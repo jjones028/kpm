@@ -1,2 +1,2 @@
-FROM amazoncorretto:21-alpine-jdk
+FROM eclipse-temurin:21-jdk-alpine
 LABEL authors="jeremy.jones"

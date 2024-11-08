@@ -2,7 +2,7 @@
 <project version="4">
   <component name="RemoteTargetsManager">
     <targets>
-      <target name="app" type="docker-compose" uuid="fa8daf09-994c-43cf-9ede-c52019edb067">
+      <target name="app" type="docker-compose" uuid="ed24e77c-c92b-473e-9e86-712989c675cc">
         <config>
           <option name="targetPlatform">
             <TargetPlatform />
@@ -16,7 +16,7 @@
         </config>
         <ContributedStateBase type="JavaLanguageRuntime">
           <config>
-            <option name="homePath" value="/usr/lib/jvm/default-jvm" />
+            <option name="homePath" value="/opt/java/openjdk" />
             <option name="javaVersionString" value="21.0.5" />
           </config>
         </ContributedStateBase>
