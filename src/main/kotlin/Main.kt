@@ -48,8 +48,8 @@ fun main(args: Array<String>) {
     val arguments = K2JVMCompilerArguments().apply {
         moduleName = "test"
         destination = ".kpm/build/test.jar"
-        kotlinHome = "/home/jeremy-jones/Projects/kpm/.kpm/kotlinc/"
-        freeArgs = listOf("/home/jeremy-jones/Projects/kpm/src/main/kotlin/Test.kt")
+        kotlinHome = ".kpm/kotlinc/"
+        freeArgs = listOf("src/main/kotlin/Test.kt")
     }
     var request = HttpRequest
         .newBuilder()
@@ -60,7 +60,7 @@ fun main(args: Array<String>) {
         .newBuilder()
         .followRedirects(HttpClient.Redirect.ALWAYS)
         .build()
-    val response = client.send(request, HttpResponse.BodyHandlers.ofFile(Path("/tmp/kotlin-compiler-2.0.21.zip")))
+    client.send(request, HttpResponse.BodyHandlers.ofFile(Path("/tmp/kotlin-compiler-2.0.21.zip")))
     unzip("/tmp/kotlin-compiler-2.0.21.zip",".kpm/")
     compiler.exec(collector, Services.Builder().build(), arguments)
 }
